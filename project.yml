@@ -2,7 +2,7 @@ name: SoundMax
 options:
   bundleIdPrefix: com.yourname
   deploymentTarget:
-    macOS: "14.0"
+    macOS: "13.0"
   xcodeVersion: "15.0"
 
 targets:
@@ -15,7 +15,8 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.yourname.SoundMax
         PRODUCT_NAME: SoundMax
-        MACOSX_DEPLOYMENT_TARGET: "14.0"
+        MACOSX_DEPLOYMENT_TARGET: "13.0"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         INFOPLIST_FILE: SoundMax/Info.plist
         CODE_SIGN_ENTITLEMENTS: SoundMax/SoundMax.entitlements
         SWIFT_VERSION: "5.9"

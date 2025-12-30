@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15F132AC9067AD02135BE53C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0AF6B0B38D96090AD4C380 /* Assets.xcassets */; };
 		1E48CE5399622798326732E4 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A097FC8AA074A9C2DB3A90 /* AudioEngine.swift */; };
 		24E3AA5A5372279C027A868B /* AutoEQManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A2248530D9686BF6F7124 /* AutoEQManager.swift */; };
 		2A2494488E18410C6D27F795 /* EQModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A60E655B672C965CAE226 /* EQModel.swift */; };
@@ -25,6 +26,7 @@
 		03EC78AF207C511ECF968539 /* EQPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQPreset.swift; sourceTree = "<group>"; };
 		07907DEB12E0717D58D55A19 /* LaunchAtLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLogin.swift; sourceTree = "<group>"; };
 		0DDABD38567914BE03CA937E /* DeviceProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProfile.swift; sourceTree = "<group>"; };
+		4C0AF6B0B38D96090AD4C380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5008C2369D4FCA33AE27B502 /* SoundMax.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoundMax.entitlements; sourceTree = "<group>"; };
 		51FD6D0200D7D0FE3101D83A /* BiquadFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiquadFilter.swift; sourceTree = "<group>"; };
 		5E8A60E655B672C965CAE226 /* EQModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQModel.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 		13C159E44B26A6D615F03CE4 /* SoundMax */ = {
 			isa = PBXGroup;
 			children = (
+				4C0AF6B0B38D96090AD4C380 /* Assets.xcassets */,
 				F71D1309559DC169C09D7F42 /* ContentView.swift */,
 				D235C00C8D24E5AD3050FF87 /* Info.plist */,
 				5008C2369D4FCA33AE27B502 /* SoundMax.entitlements */,
@@ -109,6 +112,7 @@
 			buildConfigurationList = 03DCA9856C318300459A9670 /* Build configuration list for PBXNativeTarget "SoundMax" */;
 			buildPhases = (
 				A97B8C235348D6CB4855CD7C /* Sources */,
+				15FAFACBA946DF0A81F61698 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +152,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15FAFACBA946DF0A81F61698 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15F132AC9067AD02135BE53C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A97B8C235348D6CB4855CD7C /* Sources */ = {
