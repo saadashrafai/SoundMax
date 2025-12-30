@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var selectedOutputID: AudioDeviceID?
     @State private var showingSavePreset = false
     @State private var showingAutoEQ = false
+    @State private var showingHelp = false
     @State private var newPresetName = ""
     @StateObject private var launchAtLogin = LaunchAtLogin()
 
@@ -81,10 +82,64 @@ struct ContentView: View {
 
             Spacer()
 
+            Button {
+                showingHelp.toggle()
+            } label: {
+                Image(systemName: "questionmark.circle")
+                    .foregroundColor(.secondary)
+            }
+            .buttonStyle(.plain)
+            .popover(isPresented: $showingHelp) {
+                helpView
+            }
+
             Toggle("", isOn: $eqModel.isEnabled)
                 .toggleStyle(.switch)
                 .labelsHidden()
-                .help("Enable or bypass EQ processing")
+        }
+    }
+
+    private var helpView: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Quick Help")
+                .font(.headline)
+
+            Divider()
+
+            Group {
+                helpRow(icon: "slider.vertical.3", title: "EQ Sliders", desc: "Drag up to boost, down to cut (±12dB)")
+                helpRow(icon: "speaker.wave.2", title: "Volume", desc: "Software volume for HDMI outputs")
+                helpRow(icon: "square.and.arrow.down", title: "Presets", desc: "Select or save EQ configurations")
+                helpRow(icon: "headphones", title: "AutoEQ", desc: "Apply headphone correction curves")
+                helpRow(icon: "hifispeaker", title: "Device Profiles", desc: "EQ settings saved per output device")
+                helpRow(icon: "power", title: "Start/Stop", desc: "Toggle audio processing")
+            }
+
+            Divider()
+
+            HStack {
+                Text("Tip: Set system output to BlackHole 2ch")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+        }
+        .padding()
+        .frame(width: 280)
+    }
+
+    private func helpRow(icon: String, title: String, desc: String) -> some View {
+        HStack(alignment: .top, spacing: 10) {
+            Image(systemName: icon)
+                .frame(width: 20)
+                .foregroundColor(.accentColor)
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(.system(size: 12, weight: .medium))
+                Text(desc)
+                    .font(.system(size: 11))
+                    .foregroundColor(.secondary)
+            }
         }
     }
 
