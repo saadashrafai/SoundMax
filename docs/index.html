@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundMax - Free SoundSource Alternative for macOS | 10-Band System EQ</title>
+    <meta name="description" content="SoundMax is a free, open-source 10-band parametric equalizer for macOS. A lightweight SoundSource alternative with per-device profiles, HDMI volume control, and AutoEQ headphone correction.">
+    <meta name="keywords" content="SoundSource alternative, macOS equalizer, free EQ mac, system audio equalizer, 10-band EQ, HDMI volume control, AutoEQ, macOS Sonoma, eqMac alternative">
+    <meta name="author" content="snap-sites">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SoundMax - Free SoundSource Alternative for macOS">
+    <meta property="og:description" content="Free, open-source 10-band system EQ with per-device profiles, HDMI volume control, and AutoEQ integration.">
+    <meta property="og:url" content="https://snap-sites.github.io/SoundMax/">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SoundMax - Free SoundSource Alternative">
+    <meta name="twitter:description" content="Free 10-band system EQ for macOS with AutoEQ headphone correction.">
+
+    <style>
+        :root {
+            --bg: #1a1a2e;
+            --card: #16213e;
+            --accent: #e94560;
+            --text: #eaeaea;
+            --muted: #a0a0a0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        header { text-align: center; padding: 3rem 0; }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        h1 span { color: var(--accent); }
+        .tagline { color: var(--muted); font-size: 1.2rem; margin-bottom: 2rem; }
+        .badges { margin: 1.5rem 0; }
+        .badges a { margin: 0 0.25rem; }
+        .cta { margin: 2rem 0; }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            margin: 0.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-secondary { background: var(--card); color: var(--text); border: 1px solid #333; }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        .feature {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #333;
+        }
+        .feature h3 { color: var(--accent); margin-bottom: 0.5rem; }
+        .comparison { margin: 3rem 0; }
+        .comparison h2 { text-align: center; margin-bottom: 1.5rem; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #333; }
+        th { background: #0f0f23; }
+        .check { color: #4ade80; }
+        .cross { color: #f87171; }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--muted);
+            border-top: 1px solid #333;
+            margin-top: 3rem;
+        }
+        footer a { color: var(--accent); }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sound<span>Max</span></h1>
+            <p class="tagline">Free, open-source 10-band system EQ for macOS</p>
+            <p class="tagline" style="font-size: 1rem;">The lightweight <strong>SoundSource alternative</strong> you've been looking for</p>
+
+            <div class="badges">
+                <img alt="GitHub release" src="https://img.shields.io/github/v/release/snap-sites/SoundMax?include_prereleases&style=flat-square">
+                <img alt="License" src="https://img.shields.io/github/license/snap-sites/SoundMax?style=flat-square">
+                <img alt="macOS" src="https://img.shields.io/badge/macOS-14.0+-blue?style=flat-square">
+            </div>
+
+            <div class="cta">
+                <a href="https://github.com/snap-sites/SoundMax/releases" class="btn btn-primary">Download Beta</a>
+                <a href="https://github.com/snap-sites/SoundMax" class="btn btn-secondary">View on GitHub</a>
+            </div>
+        </header>
+
+        <section class="features">
+            <div class="feature">
+                <h3>10-Band Parametric EQ</h3>
+                <p>Professional biquad filtering from 32Hz to 16kHz with ±12dB per band.</p>
+            </div>
+            <div class="feature">
+                <h3>Per-Device Profiles</h3>
+                <p>Automatically saves and restores your EQ settings for each output device.</p>
+            </div>
+            <div class="feature">
+                <h3>HDMI Volume Control</h3>
+                <p>Software volume slider for HDMI outputs - fixes macOS's missing volume control.</p>
+            </div>
+            <div class="feature">
+                <h3>AutoEQ Integration</h3>
+                <p>One-click headphone correction for 35+ popular models including AirPods, Sony, Sennheiser.</p>
+            </div>
+            <div class="feature">
+                <h3>Menu Bar App</h3>
+                <p>Lives in your menu bar. No dock icon. Always accessible.</p>
+            </div>
+            <div class="feature">
+                <h3>100% Free & Open Source</h3>
+                <p>MIT licensed. No subscriptions, no Pro tier, no tracking.</p>
+            </div>
+        </section>
+
+        <section class="comparison">
+            <h2>SoundMax vs Alternatives</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>SoundMax</th>
+                        <th>SoundSource</th>
+                        <th>eqMac</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Price</td>
+                        <td><strong>Free</strong></td>
+                        <td>$39</td>
+                        <td>Free / $34 Pro</td>
+                    </tr>
+                    <tr>
+                        <td>10-Band EQ</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Per-Device Profiles</td>
+                        <td class="check">✓ Auto</td>
+                        <td>Limited</td>
+                        <td>Limited</td>
+                    </tr>
+                    <tr>
+                        <td>HDMI Volume</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>AutoEQ Built-in</td>
+                        <td class="check">✓ 35+ headphones</td>
+                        <td class="cross">✗</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Open Source</td>
+                        <td class="check">✓</td>
+                        <td class="cross">✗</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Native SwiftUI</td>
+                        <td class="check">✓</td>
+                        <td>Partial</td>
+                        <td class="cross">✗</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section style="text-align: center; margin: 3rem 0;">
+            <h2>Quick Start</h2>
+            <p style="color: var(--muted); margin: 1rem 0;">Get system-wide EQ in under 2 minutes</p>
+            <div style="background: var(--card); padding: 1.5rem; border-radius: 12px; text-align: left; font-family: monospace; margin: 1rem 0;">
+                <p style="color: var(--muted);"># 1. Install BlackHole audio driver</p>
+                <p>brew install blackhole-2ch</p>
+                <br>
+                <p style="color: var(--muted);"># 2. Download SoundMax from GitHub Releases</p>
+                <br>
+                <p style="color: var(--muted);"># 3. Set system output to "BlackHole 2ch"</p>
+                <br>
+                <p style="color: var(--muted);"># 4. Launch SoundMax, select your speakers, click Start</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made with SwiftUI & Core Audio</p>
+            <p><a href="https://github.com/snap-sites/SoundMax">GitHub</a> · <a href="https://github.com/snap-sites/SoundMax/issues">Report Issue</a> · MIT License</p>
+        </footer>
+    </div>
+</body>
+</html>
