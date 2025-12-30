@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1E48CE5399622798326732E4 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A097FC8AA074A9C2DB3A90 /* AudioEngine.swift */; };
+		24E3AA5A5372279C027A868B /* AutoEQManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A2248530D9686BF6F7124 /* AutoEQManager.swift */; };
 		2A2494488E18410C6D27F795 /* EQModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A60E655B672C965CAE226 /* EQModel.swift */; };
 		2F8C0C1985B0255E7CB26D51 /* EQSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78ED980AAED8A73537EC45E /* EQSliderView.swift */; };
+		412E933C0BCF56E5DCA7AA27 /* AutoEQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9C36C360A279CD47D5823 /* AutoEQView.swift */; };
 		4469824EEEA88F4E660DF7AB /* AudioDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C444BFFBC1DBCB0D06DD4304 /* AudioDeviceManager.swift */; };
 		8D8D801DB1C99A988241BF5B /* BiquadFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FD6D0200D7D0FE3101D83A /* BiquadFilter.swift */; };
 		B44A1A949BC2A06490A7617D /* LaunchAtLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07907DEB12E0717D58D55A19 /* LaunchAtLogin.swift */; };
@@ -26,8 +28,10 @@
 		5008C2369D4FCA33AE27B502 /* SoundMax.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoundMax.entitlements; sourceTree = "<group>"; };
 		51FD6D0200D7D0FE3101D83A /* BiquadFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiquadFilter.swift; sourceTree = "<group>"; };
 		5E8A60E655B672C965CAE226 /* EQModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQModel.swift; sourceTree = "<group>"; };
+		B05A2248530D9686BF6F7124 /* AutoEQManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoEQManager.swift; sourceTree = "<group>"; };
 		B42DA36A1F8703E28C5084AF /* SoundMaxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundMaxApp.swift; sourceTree = "<group>"; };
 		C444BFFBC1DBCB0D06DD4304 /* AudioDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeviceManager.swift; sourceTree = "<group>"; };
+		CAA9C36C360A279CD47D5823 /* AutoEQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoEQView.swift; sourceTree = "<group>"; };
 		D235C00C8D24E5AD3050FF87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D6A097FC8AA074A9C2DB3A90 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
 		E78ED980AAED8A73537EC45E /* EQSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQSliderView.swift; sourceTree = "<group>"; };
@@ -62,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				C444BFFBC1DBCB0D06DD4304 /* AudioDeviceManager.swift */,
+				B05A2248530D9686BF6F7124 /* AutoEQManager.swift */,
 				0DDABD38567914BE03CA937E /* DeviceProfile.swift */,
 				5E8A60E655B672C965CAE226 /* EQModel.swift */,
 				03EC78AF207C511ECF968539 /* EQPreset.swift */,
@@ -82,6 +87,7 @@
 		CC6973476E463BA86F29C27F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CAA9C36C360A279CD47D5823 /* AutoEQView.swift */,
 				E78ED980AAED8A73537EC45E /* EQSliderView.swift */,
 			);
 			path = Views;
@@ -150,6 +156,8 @@
 			files = (
 				4469824EEEA88F4E660DF7AB /* AudioDeviceManager.swift in Sources */,
 				1E48CE5399622798326732E4 /* AudioEngine.swift in Sources */,
+				24E3AA5A5372279C027A868B /* AutoEQManager.swift in Sources */,
+				412E933C0BCF56E5DCA7AA27 /* AutoEQView.swift in Sources */,
 				8D8D801DB1C99A988241BF5B /* BiquadFilter.swift in Sources */,
 				D4EE2DFEEB5854168EF0A0D9 /* ContentView.swift in Sources */,
 				E0DDFD321979092D60ABC259 /* DeviceProfile.swift in Sources */,

@@ -10,6 +10,7 @@ struct ContentView: View {
     @State private var selectedInputID: AudioDeviceID?
     @State private var selectedOutputID: AudioDeviceID?
     @State private var showingSavePreset = false
+    @State private var showingAutoEQ = false
     @State private var newPresetName = ""
     @StateObject private var launchAtLogin = LaunchAtLogin()
 
@@ -57,6 +58,10 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showingSavePreset) {
             savePresetSheet
+        }
+        .sheet(isPresented: $showingAutoEQ) {
+            AutoEQView()
+                .environmentObject(eqModel)
         }
     }
 
@@ -190,6 +195,14 @@ struct ContentView: View {
                 }
                 .buttonStyle(.borderless)
                 .help("Save current EQ as a custom preset")
+
+                Button {
+                    showingAutoEQ = true
+                } label: {
+                    Image(systemName: "headphones")
+                }
+                .buttonStyle(.borderless)
+                .help("Apply AutoEQ headphone correction")
 
                 if let customPreset = eqModel.selectedCustomPreset {
                     Button {

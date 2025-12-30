@@ -12,6 +12,7 @@ SoundMax sits in your menu bar and applies real-time EQ processing to all system
 - **Custom Presets** - Save and load your own EQ configurations
 - **Per-Device Profiles** - Automatically save and restore EQ settings for each output device
 - **HDMI Volume Control** - Software volume slider for HDMI outputs (macOS disables hardware control)
+- **AutoEQ Integration** - One-click headphone correction for 35+ popular headphones (via [AutoEQ](https://github.com/jaakkopasanen/AutoEq))
 - **Menu Bar App** - Always accessible, no dock icon clutter
 - **Launch at Login** - Optional auto-start with your Mac
 - **Device Flexibility** - Works with various audio interfaces and sample rates
@@ -120,6 +121,26 @@ SoundMax automatically remembers your EQ settings for each output device:
 3. **HDMI displays**: A software volume slider appears since macOS disables hardware volume control for HDMI
 
 This is perfect for users who switch between headphones, speakers, and HDMI displays with different audio characteristics.
+
+### AutoEQ Headphone Correction
+
+SoundMax integrates with the [AutoEQ](https://github.com/jaakkopasanen/AutoEq) project to provide scientifically-measured frequency response corrections for popular headphones.
+
+1. Click the **headphones icon** (🎧) next to the preset menu
+2. Search for your headphones or browse the list
+3. Click to apply the correction curve
+4. Your EQ is automatically adjusted to flatten your headphone's frequency response
+
+**Included headphones:**
+- Sennheiser HD 600/650/800
+- Beyerdynamic DT 770/880/990
+- Sony WH-1000XM4/XM5
+- Apple AirPods Pro / Pro 2
+- Audio-Technica ATH-M50x
+- HiFiMAN Sundara
+- And 25+ more...
+
+The correction curves are fetched from the AutoEQ database and converted to our 10-band format.
 
 ## Troubleshooting
 
