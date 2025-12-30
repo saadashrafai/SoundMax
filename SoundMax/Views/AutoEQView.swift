@@ -7,7 +7,7 @@ struct AutoEQView: View {
 
     @State private var searchText = ""
     @State private var selectedHeadphone: AutoEQHeadphone?
-    @State private var showingConfirmation = false
+    @FocusState private var isSearchFocused: Bool
 
     var body: some View {
         VStack(spacing: 16) {
@@ -29,6 +29,12 @@ struct AutoEQView: View {
         }
         .padding()
         .frame(width: 400, height: 450)
+        .onAppear {
+            // Delay focus to ensure view is ready
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                isSearchFocused = true
+            }
+        }
     }
 
     private var header: some View {
@@ -43,9 +49,11 @@ struct AutoEQView: View {
             Text("Apply frequency response corrections for your headphones")
                 .font(.caption)
                 .foregroundColor(.secondary)
+                .help("AutoEQ provides scientifically-measured corrections to flatten your headphone's frequency response")
 
             Link("Powered by AutoEQ", destination: URL(string: "https://github.com/jaakkopasanen/AutoEq")!)
                 .font(.caption2)
+                .help("Open AutoEQ project on GitHub")
         }
     }
 
@@ -55,7 +63,8 @@ struct AutoEQView: View {
                 .foregroundColor(.secondary)
 
             TextField("Search headphones...", text: $searchText)
-                .textFieldStyle(.plain)
+                .textFieldStyle(.roundedBorder)
+                .focused($isSearchFocused)
                 .onChange(of: searchText) { _, newValue in
                     if newValue.isEmpty {
                         autoEQManager.searchResults = AutoEQManager.popularHeadphones
@@ -68,16 +77,19 @@ struct AutoEQView: View {
                 Button {
                     searchText = ""
                     autoEQManager.searchResults = AutoEQManager.popularHeadphones
+                    isSearchFocused = true
                 } label: {
                     Image(systemName: "xmark.circle.fill")
                         .foregroundColor(.secondary)
                 }
                 .buttonStyle(.plain)
+                .help("Clear search")
             }
         }
         .padding(8)
         .background(Color.gray.opacity(0.1))
         .cornerRadius(8)
+        .help("Type to search for your headphones")
     }
 
     private var loadingView: some View {
@@ -161,6 +173,7 @@ struct AutoEQView: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
+        .help("Click to apply \(headphone.name) correction curve")
     }
 
     private var footer: some View {
@@ -168,6 +181,7 @@ struct AutoEQView: View {
             Button("Cancel") {
                 dismiss()
             }
+            .help("Close without applying changes")
 
             Spacer()
 
@@ -175,12 +189,14 @@ struct AutoEQView: View {
                 Text("Applied: \(selectedHeadphone!.name)")
                     .font(.caption)
                     .foregroundColor(.green)
+                    .help("Currently applied headphone correction")
             }
 
             Button("Done") {
                 dismiss()
             }
             .buttonStyle(.borderedProminent)
+            .help("Close and keep applied EQ settings")
         }
     }
 
